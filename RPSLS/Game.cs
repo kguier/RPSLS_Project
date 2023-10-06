@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Buffers.Text;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -23,7 +24,10 @@ namespace RPSLS
         //Member Methods (CAN DO)
         public void WelcomeMessage()
         {
-            Console.WriteLine("Welcome to RPSLS! Here are the rules:\n");
+            { 
+                Console.WriteLine($"Welcome to RPSLS! Here are the rules:\nRock crushes Scissors\nScissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock"); 
+            }            
+
         }
 
         public int ChooseNumberOfHumanPlayers()
@@ -50,7 +54,17 @@ namespace RPSLS
         {
             //Step 1: Display the rules of the game.
             WelcomeMessage();
-
+            //Rock crushes Scissors
+            //Scissors cuts Paper
+            //Paper covers Rock
+            //Rock crushes Lizard
+            //Lizard poisons Spock
+            //Spock smashes Scissors
+            //Scissors decapitates Lizard
+            //Lizard eats Paper
+            //Paper disproves Spock
+            //Spock vaporizes Rock
+            
             //Step 2: Ask how many human players will be playing. (Single Player or Multi Player)
             //Step 3: Prompt the 1st Player to provide a name for themselves
             //Step 4: if there is a 2nd human Player, prompt them to provide a name for themselves.
