@@ -25,14 +25,43 @@ namespace RPSLS
         public void WelcomeMessage()
         {
             { 
-                Console.WriteLine($"Welcome to RPSLS! Here are the rules:\nRock crushes Scissors\nScissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock"); 
+                Console.WriteLine("Welcome to RPSLS! Here are the rules:\nRock crushes Scissors\nScissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\n\nBest two out of three!"); 
             }            
 
         }
 
         public int ChooseNumberOfHumanPlayers()
         {
-            return 0;
+            Console.WriteLine("\nHow many are fighting today, 1 or 2?");
+            string players = Console.ReadLine();
+            int numberOfPlayers = Convert.ToInt16(players);
+
+            //for (int numberOfPlayers = 0; numberOfPlayers < 3; numberOfPlayers++)
+            //{
+            //    if (players == "1")
+            //    {
+            //        numberOfPlayers = 1;
+            //        Console.WriteLine("What is your fighter's name?");
+            //        Console.ReadLine();
+            //        break;
+            //    }
+            //    else if (players == "2")
+            //    {
+            //        numberOfPlayers = 2;
+            //        Console.WriteLine("What is the first fighter's name?");
+            //        Console.ReadLine();
+            //        Console.WriteLine("What is the second fighter's name?");
+            //        Console.ReadLine();
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("This game can only be played with 1 or 2 people; sorry!");
+            //        break;
+            //    }
+            //}
+            
+            return numberOfPlayers;
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
@@ -64,8 +93,9 @@ namespace RPSLS
             //Lizard eats Paper
             //Paper disproves Spock
             //Spock vaporizes Rock
-            
+
             //Step 2: Ask how many human players will be playing. (Single Player or Multi Player)
+            ChooseNumberOfHumanPlayers();
             //Step 3: Prompt the 1st Player to provide a name for themselves
             //Step 4: if there is a 2nd human Player, prompt them to provide a name for themselves.
             //Step 5:  Display all of the possible options to Player 1 and have them select the gesture they would like to play
