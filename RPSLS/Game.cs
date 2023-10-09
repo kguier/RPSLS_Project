@@ -35,38 +35,31 @@ namespace RPSLS
             Console.WriteLine("\nHow many are fighting today, 1 or 2?");
             string players = Console.ReadLine();
             int numberOfPlayers = Convert.ToInt16(players);
-
-            //for (int numberOfPlayers = 0; numberOfPlayers < 3; numberOfPlayers++)
-            //{
-            //    if (players == "1")
-            //    {
-            //        numberOfPlayers = 1;
-            //        Console.WriteLine("What is your fighter's name?");
-            //        Console.ReadLine();
-            //        break;
-            //    }
-            //    else if (players == "2")
-            //    {
-            //        numberOfPlayers = 2;
-            //        Console.WriteLine("What is the first fighter's name?");
-            //        Console.ReadLine();
-            //        Console.WriteLine("What is the second fighter's name?");
-            //        Console.ReadLine();
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("This game can only be played with 1 or 2 people; sorry!");
-            //        break;
-            //    }
-            //}
-            
+       
             return numberOfPlayers;
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
+            if (numberOfHumanPlayers == 1)
+            {
+                Console.WriteLine("What is this fighter's name?");
+                string playerName = Console.ReadLine();
+                HumanPlayer playerOne;
+                ComputerPlayer playerTwo;
+                
 
+            }
+            else if (numberOfHumanPlayers == 2)
+            {
+                Console.WriteLine("What is the first fighter's name?");
+                string playerNameOne = Console.ReadLine();
+                HumanPlayer playerOne;
+                Console.WriteLine("What is the second fighter's name?");
+                string playerNameTwo = Console.ReadLine();
+                HumanPlayer playerTwo;
+
+            }
         }
 
         public void CompareGestures()
@@ -96,6 +89,7 @@ namespace RPSLS
 
             //Step 2: Ask how many human players will be playing. (Single Player or Multi Player)
             ChooseNumberOfHumanPlayers();
+
             //Step 3: Prompt the 1st Player to provide a name for themselves
             //Step 4: if there is a 2nd human Player, prompt them to provide a name for themselves.
             //Step 5:  Display all of the possible options to Player 1 and have them select the gesture they would like to play
