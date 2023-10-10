@@ -41,7 +41,7 @@ namespace RPSLS
             Console.WriteLine("Rock\nPaper\nScissors\nLizard\nSpock\n\n" + name + "Choose a gesture!");
             chosenGesture = Console.ReadLine();
 
-            throw new NotImplementedException();
+            
         }
     }
     internal class ComputerPlayer : Player 
@@ -55,10 +55,10 @@ namespace RPSLS
         }
         public override void ChooseGesture()
         {
-            Random rnd = new Random();
-            chosenGesture = 
+            Random random = new Random();
+            int num = random.Next(4);
+            chosenGesture = gestures[num];
             
-            throw new NotImplementedException();
         }
     }    
 }
