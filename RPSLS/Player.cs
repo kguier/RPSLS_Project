@@ -29,7 +29,7 @@ namespace RPSLS
     }
     internal class HumanPlayer : Player 
     {
-        public HumanPlayer(string name) 
+        public HumanPlayer(string name) : base(name)
         {
             this.name = name;
             gestures = new List<string> { "rock", "paper", "scissors", "lizard", "Spock" };
@@ -46,7 +46,7 @@ namespace RPSLS
     }
     internal class ComputerPlayer : Player 
     {
-        public ComputerPlayer(string name)
+        public ComputerPlayer(string name) : base(name)
         {
             this.name = name;
             gestures = new List<string> { "rock", "paper", "scissors", "lizard", "Spock" };

@@ -64,6 +64,8 @@ namespace RPSLS
 
         public void CompareGestures()
         {
+            Console.WriteLine(playerOne.chosenGesture);
+            Console.WriteLine(playerTwo.chosenGesture);
 
         }
 
@@ -92,6 +94,8 @@ namespace RPSLS
 
             //Step 3: Prompt the 1st Player to provide a name for themselves
             //Step 4: if there is a 2nd human Player, prompt them to provide a name for themselves.
+
+            
             //Step 5:  Display all of the possible options to Player 1 and have them select the gesture they would like to play
             //Step 6: if there is a human Player 2, display all of the possible options to Player 2 and have them select the gesture they would like to play; else, the computer will choose(random).
             //Step 7: Display the choices made by both players.
