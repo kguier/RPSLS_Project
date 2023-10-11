@@ -38,7 +38,7 @@ namespace RPSLS
         }
         public override void ChooseGesture()
         {
-            Console.WriteLine("Rock\nPaper\nScissors\nLizard\nSpock\n\n ${name} Choose a gesture!");
+            Console.WriteLine($"\nRock\nPaper\nScissors\nLizard\nSpock\n\n{name}, Choose a gesture!\n");
             chosenGesture = Console.ReadLine();
 
             
